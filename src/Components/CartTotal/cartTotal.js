@@ -1,16 +1,18 @@
-.containerCartTotal {
-    position: absolute;
+import styled from "styled-components";
+
+export const ContainerCartTotal = styled.div`
+position: absolute;
     bottom: 0px;
     left: 0px;
     border: none;
     border-top: 2px solid #E0E0E0;
     display: flex;
     flex-direction: column;
-    width: 365px;
+    width: 325px;
     align-items: center;
-}
+    
 
-.totalValueAndText {
+    .totalValueAndText {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -44,3 +46,4 @@
 .buttonRemoveAll:hover{
     cursor: pointer;
 }
+`

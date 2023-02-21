@@ -1,14 +1,15 @@
-import './productsList.css'
+
 import Product from '../Product'
+import { ProductsListContainer } from './productsList'
 
 function ProductsList({ products, addCart }) {
     return (
-        <div className='productsListContainer'>
+        <ProductsListContainer>
             {products.map((product, index) => (
                 <Product key={`${index}-${product.name}`} product={product} addCart={addCart} />
             ))}
-        </div>
-    )
+        </ProductsListContainer>
+    ) 
 }
 
 export default ProductsList

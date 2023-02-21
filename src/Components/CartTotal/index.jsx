@@ -1,8 +1,8 @@
-import './cartTotal.css'
+import { ContainerCartTotal } from './cartTotal'
 
 function CartTotal({ totalValue, removeAllProducts }) {
     return (
-        <div className='containerCartTotal'>
+        <ContainerCartTotal>
             <div className='totalValueAndText'>
                 <h1 className='textTotal'>Total</h1>
                 <p className='totalValueText'>R$ {totalValue}</p>
@@ -10,8 +10,8 @@ function CartTotal({ totalValue, removeAllProducts }) {
             <div className='buttonRemoveAllCart'>
                 <button className='buttonRemoveAll' onClick={() => removeAllProducts()}>Remover Todos</button>
             </div>
-        </div>
+        </ContainerCartTotal>
     )
 }
 
-export default CartTotal
+export default CartTotal 

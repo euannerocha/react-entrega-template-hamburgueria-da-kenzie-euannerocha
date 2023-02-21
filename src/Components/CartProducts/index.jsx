@@ -1,8 +1,8 @@
-import './cartProducts.css'
+import { CartProductsContainer } from './cartProducts'
 
 function CartProducts({ product, removeCartProduct }) {
     return (
-        <div className='cartProductsContainer'>
+        <CartProductsContainer>
             <div className='imageCartProduct'>
                 <img className='imgCartProduct' src={product.img} />
             </div>
@@ -13,8 +13,8 @@ function CartProducts({ product, removeCartProduct }) {
             <div className='buttonRemoveCartProduct'>
                 <button className='buttonRemove' onClick={() => removeCartProduct(product)}>Remover</button>
             </div>
-        </div>
+        </CartProductsContainer>
     )
-}
+} 
 
 export default CartProducts

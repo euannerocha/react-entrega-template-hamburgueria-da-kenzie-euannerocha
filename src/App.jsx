@@ -4,6 +4,7 @@ import Header from '../src/Components/Header'
 import Cart from './Components/Cart'
 import ProductsList from './Components/ProductsList'
 import Api from './Services/Api'
+import { AppStyled } from './Components/AppStyled/appStyled'
 
 
 function App() {
@@ -39,19 +40,13 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <div className='headerApp'>
-        <Header />
+    <AppStyled>
+      <Header />
+      <div className='productsAndCartList'>
+        <ProductsList products={products} addCart={addCart} />
+        <Cart removeAllProducts={removeAllProducts} removeCartProduct={removeCartProduct} currentCart={currentCart} />
       </div>
-      <div className='productsAndCart'>
-        <div className='productsListApp'>
-          <ProductsList products={products} addCart={addCart} />
-        </div>
-        <div className='cartApp'>
-          <Cart removeAllProducts={removeAllProducts} removeCartProduct={removeCartProduct} currentCart={currentCart} />
-        </div>
-      </div>
-    </div>
+    </AppStyled>
   )
 }
 

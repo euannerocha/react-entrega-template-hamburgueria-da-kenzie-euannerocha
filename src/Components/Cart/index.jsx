@@ -1,13 +1,14 @@
-import './cart.css'
+// import './cart.css'
 import CartProducts from '../CartProducts'
 import CartTotal from '../CartTotal'
 import { useEffect, useState } from 'react'
+import { StyledCart } from './cart'
 
 function Cart({ currentCart, removeCartProduct, removeAllProducts }) {
-    
+
     const [totalValue, setTotalValue] = useState(0)
 
-    useEffect(()=>{
+    useEffect(() => {
         const total = currentCart.reduce((acc, product) => {
             return acc + product.price
         }, 0)
@@ -17,7 +18,7 @@ function Cart({ currentCart, removeCartProduct, removeAllProducts }) {
     }, [currentCart])
 
     return (
-        <div className='containerCart'>
+        <StyledCart>
             <div className='cartHeader'>
                 <h1 className='cartTitle'>Carrinho de compras</h1>
             </div>
@@ -27,9 +28,9 @@ function Cart({ currentCart, removeCartProduct, removeAllProducts }) {
                 })}
             </div>
             <div className='totalValueCart'>
-                <CartTotal removeAllProducts={removeAllProducts} totalValue={totalValue}/>
+                <CartTotal removeAllProducts={removeAllProducts} totalValue={totalValue} />
             </div>
-        </div>
+        </StyledCart>
     )
 }
 

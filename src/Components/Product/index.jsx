@@ -1,5 +1,3 @@
-import '../ProductsList/productsList.css'
-
 function Product({ product, addCart }) {
     return (
         <div className='productCart'>

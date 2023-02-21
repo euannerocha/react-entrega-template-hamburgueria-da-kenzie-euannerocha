@@ -1,8 +1,6 @@
- body{
-    margin-bottom: 50px;
- }
- 
- .productsListContainer{
+import styled from "styled-components";
+
+export const ProductsListContainer = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -10,6 +8,9 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px; 
+
+    body{
+    margin-bottom: 50px;
  }
 
  .titleAndTypeProductsList{
@@ -47,7 +48,7 @@
     background-color:transparent;
     border: 2px solid #F5F5F5;
     width: 250px;
-    height: 300px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,3 +66,4 @@
     right: 10px;
     width: 90px;
  }
+`
